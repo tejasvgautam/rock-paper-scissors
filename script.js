@@ -8,8 +8,7 @@ function getRandomInt(min, max){
 }
 
 function getHumanChoice(){
-    const input = prompt("Choose Rock Paper Scissors!:");
-    return input;
+    
 }
 
 function getComputerChoice(){
