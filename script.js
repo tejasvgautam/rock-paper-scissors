@@ -1,6 +1,10 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const rock_button = document.querySelector("#rock-button");
+const paper_button = document.querySelector("#paper-button");
+const scissor_button = document.querySelector("#scissor-button");
+
 function getRandomInt(min, max){
     const minCeiled = Math.ceil(min);
     const maxFloor = Math.floor(max);
@@ -38,12 +42,20 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
+
+rock_button.addEventListener("click", playRound);
+
 function playGame(){
+
+    /*
+
     for(i=1; i<=5; i++){
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
         console.log(playRound(humanSelection, computerSelection));
     }
+
+    */
 }
 
 console.log(playGame());
