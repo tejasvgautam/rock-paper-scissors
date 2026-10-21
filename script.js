@@ -11,11 +11,6 @@ function getRandomInt(min, max){
     return Math.floor((Math.random() * (maxFloor - minCeiled) + minCeiled));
 }
 
-function getHumanChoice(){
-    const input = prompt("Choose Rock Paper Scissors!:");
-    return input;
-}
-
 function getComputerChoice(){
 
     const choice = getRandomInt(0,3);
