@@ -1,57 +1,19 @@
 let humanScore = 0;
 let computerScore = 0;
 
-const rock_button = document.querySelector("#rock-button");
-const paper_button = document.querySelector("#paper-button");
-const scissor_button = document.querySelector("#scissor-button");
-
 function getRandomInt(min, max){
     const minCeiled = Math.ceil(min);
     const maxFloor = Math.floor(max);
     return Math.floor((Math.random() * (maxFloor - minCeiled) + minCeiled));
 }
 
+function getHumanChoice(){
+}
+
 function getComputerChoice(){
 
-    const choice = getRandomInt(0,3);
-    if (choice === 0){
-        return "rock";
-    } else if(choice === 1){
-        return "paper";
-    } else if (choice === 2){
-        return "scissor";
-    }
 }
 
-function playRound(humanChoice, computerChoice){
-    const capitalHumanChoice = humanChoice.toUpperCase();
+function playRound(){
 
-    if(capitalHumanChoice === computerChoice.toUpperCase()){
-        return "It's a tie!"
-    }else if((capitalHumanChoice === "ROCK" && computerChoice === "scissor") || (capitalHumanChoice === "PAPER" && computerChoice === "rock") || (capitalHumanChoice === "SCISSOR" && computerChoice === "paper")){
-        humanScore += 1;
-        return "You win!"
-    }else if ((capitalHumanChoice === "ROCK" && computerChoice === "paper") || (capitalHumanChoice === "PAPER" && computerChoice === "scissor") || (capitalHumanChoice === "SCISSOR" && computerChoice === "rock")){
-        computerScore += 1;
-        return "You lose!"
-    }
 }
-
-
-rock_button.addEventListener("click", playRound);
-
-function playGame(){
-
-    /*
-
-    for(i=1; i<=5; i++){
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        console.log(playRound(humanSelection, computerSelection));
-    }
-
-    */
-}
-
-console.log(playGame());
-console.log(`You: ${humanScore}, Computer: ${computerScore}`);
